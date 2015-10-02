@@ -25,8 +25,8 @@ CSS Style Structure
 ---------- GENERAL ---------
 --------------------------*/
 
-@import url(https://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic,700);
-@import url(https://fonts.useso.com/css?family=Didact+Gothic);
+@import url(http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic,700);
+@import url(http://fonts.useso.com/css?family=Didact+Gothic);
 
 html, body {
   background: #ffffff;
@@ -418,6 +418,10 @@ li, ul {
   position: relative;
   }
 
+#home .item{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 #home .divider-top{
   background: url(../img/divider2.png) center top no-repeat;
   height: 5px;
