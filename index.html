@@ -192,9 +192,9 @@
       <form action="contact.php" id="myform"> <!-- Form -->
         <div class="wow fadeIn">
           <div class="col-md-4"> <!-- Left Form -->
-            <input type="email" placeholder="邮箱" name="email" required="required" class="c-text" >
-            <input type="text" placeholder="名称" name="name" required="required" class="c-text" >
-            <input type="text" placeholder="主题" name="subject" required="required" class="c-text" >
+            <input type="email" placeholder="邮箱" name="email" id="email" required="required" class="c-text" >
+            <input type="text" placeholder="名称" name="name" id="name" required="required" class="c-text" >
+            <input type="text" placeholder="主题" name="subject" id="subject" required="required" class="c-text" >
           </div> <!-- End Left Form -->
         </div>
 
@@ -254,7 +254,15 @@
     <script type="text/javascript" src="js/toucheffects.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript">
+      function ChkMail(szMail){ 
+        var szReg = /^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/; 
+        return szReg.test(szMail);
+      }
       $("#sub").click(function(){
+        if(!ChkMail($("#email").val())){
+          alert("邮箱不正确");
+          return;
+        }
         $("#myform").submit();
       })
     </script>
