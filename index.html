@@ -189,7 +189,7 @@
     </div>
 
 
-      <form action="contact.php"> <!-- Form -->
+      <form action="contact.php" id="myform"> <!-- Form -->
         <div class="wow fadeIn">
           <div class="col-md-4"> <!-- Left Form -->
             <input type="email" placeholder="邮箱" name="email" required="required" class="c-text" >
@@ -201,7 +201,7 @@
         <div class="wow fadeIn">
           <div class="col-md-4"> <!-- Right Form -->
             <textarea name="message"  class="m-text" required="required" placeholder="内容" rows="3"></textarea>
-            <button type="button" name="subscribe" class="send-text contact-btn">留言</button>
+            <button type="button" name="subscribe" class="send-text contact-btn" id="sub">留言</button>
           </div><!-- End Right Form -->
         </div>
 
@@ -253,6 +253,11 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/toucheffects.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript">
+      $("#sub").click(function(){
+        $("#myform").submit();
+      })
+    </script>
 
 
   </body>
